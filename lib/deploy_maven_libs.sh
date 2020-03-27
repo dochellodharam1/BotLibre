@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 mvn install:install-file -Dfile=./lib/boof/BoofCV-android-0.23.jar -DgroupId=BoofCV -DartifactId=android -Dversion=0.23 -Dpackaging=jar -DgeneratePom=true 
 mvn install:install-file -Dfile=./lib/boof/BoofCV-calibration-0.23.jar -DgroupId=BoofCV -DartifactId=calibration -Dversion=0.23 -Dpackaging=jar -DgeneratePom=true 
 mvn install:install-file -Dfile=./lib/boof/BoofCV-feature-0.23.jar -DgroupId=BoofCV -DartifactId=feature -Dversion=0.23 -Dpackaging=jar -DgeneratePom=true 
