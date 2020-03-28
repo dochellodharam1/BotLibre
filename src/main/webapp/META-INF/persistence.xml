@@ -59,7 +59,7 @@
 		<class>org.botlibre.web.service.Translation</class>
 		<class>org.botlibre.web.service.BotTranslation</class>
 		<properties>
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d95puo9ftrvjo5"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d95puo9ftrvjo5"/>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 			<property name="javax.persistence.jdbc.user" value="qxxmyyiknsmmpd"/>
 			<property name="javax.persistence.jdbc.password" value="8b4d1b3f7c652bcfa437642d83bb9f3b3e7ce4303e0f1c1fef4754a578b71844"/>
@@ -68,31 +68,31 @@
 			<!-- property name="eclipselink.logging.level" value="fine"/-->
 		</properties>
 	</persistence-unit>
-	
-	<!--
+
 	<persistence-unit name="botlibreplatform_bots" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<properties>
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:botlibreplatform_bots"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d95puo9ftrvjo5"/>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-			<property name="javax.persistence.jdbc.user" value="postgres"/>
-			<property name="javax.persistence.jdbc.password" value="password"/>
+			<property name="javax.persistence.jdbc.user" value="qxxmyyiknsmmpd"/>
+			<property name="javax.persistence.jdbc.password" value="8b4d1b3f7c652bcfa437642d83bb9f3b3e7ce4303e0f1c1fef4754a578b71844"/>
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
 			<property name="eclipselink.logging.parameters" value="true"/>
 			<property name="eclipselink.logging.level" value="fine"/>
 		</properties>
 	</persistence-unit>
-	
+
 	<persistence-unit name="postgres" transaction-type="RESOURCE_LOCAL">
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:postgres"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d95puo9ftrvjo5"/>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-			<property name="javax.persistence.jdbc.user" value="postgres"/>
-			<property name="javax.persistence.jdbc.password" value="password"/>
+			<property name="javax.persistence.jdbc.user" value="qxxmyyiknsmmpd"/>
+			<property name="javax.persistence.jdbc.password" value="8b4d1b3f7c652bcfa437642d83bb9f3b3e7ce4303e0f1c1fef4754a578b71844"/>
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
 			<property name="eclipselink.logging.parameters" value="true"/>
 			<property name="eclipselink.logging.level" value="fine"/>
 		</properties>
 	</persistence-unit>
-	
-	-->
+
 </persistence>
