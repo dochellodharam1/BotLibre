@@ -1,5 +1,3 @@
-M2="~/.m2"
-
 function check_install() {
 	local var file=$1
 	local var groupId=$2
@@ -12,9 +10,9 @@ function check_install() {
 	local var fileName=`echo "$file" | rev | cut -d'/' -f 1 | rev`
 	
 	if [ -f $M2/repository/$groupPath/$artifactId/$version/$fileName ]; then
-		# Leave black
+		echo "Skiping install for $fileName"
 	else
-		INSTALL_CMD="mvn install:install-file -Dfile=$file -DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version -Dpackaging=$packaging -DgeneratePom=$generatePom" 
+		INSTALL_CMD="$MAVEN_CMD install:install-file -Dfile=$file -DgroupId=$groupId -DartifactId=$artifactId -Dversion=$version -Dpackaging=$packaging -DgeneratePom=$generatePom" 
 		$INSTALL_CMD 2>&1 | sed -u 's/^/       /'
 	fi
 }
