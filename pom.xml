@@ -260,11 +260,11 @@
 			<version>0.1</version>
 			<scope>${scope}</scope>
 		</dependency>   
-
+ 
 		<dependency>
 			<groupId>org.botlibre.required.lib</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>9.4_1203.jdbc4</version>
+			<version>42.2.11</version>
 			<scope>${scope}</scope>
 		</dependency>   
 

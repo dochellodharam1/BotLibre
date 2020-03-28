@@ -1,5 +1,5 @@
 
-KEEP_M2_CACHE="false"
+KEEP_M2_CACHE="true"
 
 function check_install() {
     local var file=$1
@@ -60,7 +60,7 @@ check_install './lib/irc/chatengine-unknown.jar' 'org.botlibre.required.lib' 'ch
 check_install './lib/jaxb/jaxb-api-2.2.jar' 'org.botlibre.required.lib' 'jaxb-api' '2.2' 'jar' 'true' '34 of 116'
 check_install './lib/jpa/eclipselink-0.1.jar' 'org.botlibre.required.lib' 'eclipselink' '0.1' 'jar' 'true' '35 of 116'
 check_install './lib/jpa/persistence-0.1.jar' 'org.botlibre.required.lib' 'persistence' '0.1' 'jar' 'true' '36 of 116'
-check_install './lib/jpa/postgresql-9.4_1203.jdbc4.jar' 'org.botlibre.required.lib' 'postgresql' '9.4_1203.jdbc4' 'jar' 'true' '37 of 116'
+check_install './lib/jpa/postgresql-42.2.11.jar' 'org.botlibre.required.lib' 'postgresql' '42.2.11' 'jar' 'true' '37 of 116'
 check_install './lib/json/commons-beanutils-1.8.0.jar' 'org.botlibre.required.lib' 'commons-beanutils' '1.8.0' 'jar' 'true' '38 of 116'
 check_install './lib/json/commons-collections-3.2.1.jar' 'org.botlibre.required.lib' 'commons-collections' '3.2.1' 'jar' 'true' '39 of 116'
 check_install './lib/json/commons-lang-2.4.jar' 'org.botlibre.required.lib' 'commons-lang' '2.4' 'jar' 'true' '40 of 116'

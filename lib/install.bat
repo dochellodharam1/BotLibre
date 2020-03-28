@@ -106,7 +106,7 @@ ECHO Progress: processed 35 of 116
 CALL mvn install:install-file -Dfile=./lib/jpa/persistence-0.1.jar -DgroupId=org.botlibre.required.lib -DartifactId=persistence -Dversion=0.1 -Dpackaging=jar -DgeneratePom=true 
 
 ECHO Progress: processed 36 of 116 
-CALL mvn install:install-file -Dfile=./lib/jpa/postgresql-9.4_1203.jdbc4.jar -DgroupId=org.botlibre.required.lib -DartifactId=postgresql -Dversion=9.4_1203.jdbc4 -Dpackaging=jar -DgeneratePom=true 
+CALL mvn install:install-file -Dfile=./lib/jpa/postgresql-42.2.11.jar -DgroupId=org.botlibre.required.lib -DartifactId=postgresql -Dversion=42.2.11 -Dpackaging=jar -DgeneratePom=true 
 
 ECHO Progress: processed 37 of 116 
 CALL mvn install:install-file -Dfile=./lib/json/commons-beanutils-1.8.0.jar -DgroupId=org.botlibre.required.lib -DartifactId=commons-beanutils -Dversion=1.8.0 -Dpackaging=jar -DgeneratePom=true 
