@@ -1,5 +1,5 @@
 
-KEEP_M2_CACHE="true"
+KEEP_M2_CACHE="false"
 
 function check_install() {
     local var file=$1
