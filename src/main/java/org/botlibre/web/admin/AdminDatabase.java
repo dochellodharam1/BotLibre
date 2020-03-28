@@ -368,8 +368,8 @@ public class AdminDatabase {
 					Bot.PROGRAM = Site.NAME;
 					Bot.VERSION = Site.VERSION;
 					Bot.POOL_SIZE = Site.MAX_BOT_POOL_SIZE;
-					DatabaseMemory.SCHEMA_URL_PREFIX = Site.DATABASE_URL + "/" + Site.PERSISTENCE_UNIT + "?currentSchema=";
-					DatabaseMemory.DATABASE_URL = Site.DATABASE_URL + "/" + Site.PERSISTENCE_UNIT;
+					DatabaseMemory.SCHEMA_URL_PREFIX = Site.DATABASE_URL;
+					DatabaseMemory.DATABASE_URL = Site.DATABASE_URL;
 					DatabaseMemory.DATABASE_PASSWORD = Site.DATABASEPASSWORD;
 
 					Map<String, String> properties = new HashMap<String, String>();

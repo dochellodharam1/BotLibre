@@ -89,7 +89,7 @@ public class Site {
 	// JavaScript embed prefix.
 	public static String PREFIX = "botplatform";
 	// JPA persistence unit.
-	public static String PERSISTENCE_UNIT = "d95puo9ftrvjo5";
+	public static String PERSISTENCE_UNIT = "postgres";
 	// Twitter hash tag.
 	public static String HASHTAG = "botlibre";
 	// Default content type.
@@ -203,7 +203,7 @@ public class Site {
 	public static String YANDEX_KEY = "";
 	public static String DATABASE_USER = "qxxmyyiknsmmpd";
 	public static String DATABASEPASSWORD = "8b4d1b3f7c652bcfa437642d83bb9f3b3e7ce4303e0f1c1fef4754a578b71844";
-	public static String DATABASE_URL = "jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432";
+	public static String DATABASE_URL = "jdbc:postgresql:ec2-54-217-204-34.eu-west-1.compute.amazonaws.com:5432/d95puo9ftrvjo5";
 	public static String OBFUSCATE_DATABASEPASSWORD = "";
 
 	@SuppressWarnings("rawtypes")
