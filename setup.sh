@@ -1,1 +1,1 @@
-. lib/deploy_maven_libs.sh
+. lib/install.sh

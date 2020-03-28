@@ -3,3 +3,7 @@
 /.settings
 /log
 /bin
+.idea
+.idea/**
+.idea/*
+*.iml
