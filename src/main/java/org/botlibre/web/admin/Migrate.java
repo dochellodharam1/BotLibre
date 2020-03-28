@@ -84,7 +84,7 @@ public class Migrate  {
 					AdminDatabase.instance().log(exception);
 				}
 				try {
-					connection.createStatement().executeUpdate("CREATE DATABASE " + Site.PERSISTENCE_UNIT + "_bots");
+					connection.createStatement().executeUpdate("CREATE DATABASE " + Site.PERSISTENCE_UNIT);
 				} catch (Exception exception) {
 					AdminDatabase.instance().log(exception);
 				}

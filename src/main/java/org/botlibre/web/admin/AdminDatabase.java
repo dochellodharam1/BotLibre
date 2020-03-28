@@ -148,10 +148,6 @@ import org.botlibre.web.service.WeChatService;
 public class AdminDatabase {
 	public static boolean DATABASEFAILURE = false;
 	public static boolean RECREATE_DATABASE = true;
-	public static String DATABASE_USER = "postgres";
-	public static String DATABASE_PASSWORD = "password";
-	public static String IMPORT_URL = "jdbc:postgresql:";
-	public static String DATABASE_URL = "jdbc:postgresql:botlibre";
 	public static String DATABASE_DRIVER = "org.postgresql.Driver";
 	
 	public static Map<String, String> bannedIPs = new HashMap<String, String>();
@@ -225,8 +221,8 @@ public class AdminDatabase {
 	public static void createAdminDatabase() {
 		try {
 			Class.forName(DATABASE_DRIVER);
-			Connection connection = DriverManager.getConnection(IMPORT_URL, DATABASE_USER, DATABASE_PASSWORD);
-			connection.createStatement().execute("create database botlibre");
+			Connection connection = DriverManager.getConnection(Site.DATABASE_URL, Site.DATABASE_USER, Site.DATABASEPASSWORD);
+			//connection.createStatement().execute("create database botlibre");
 			connection.close();
 		} catch (Exception failed) {
 			failed.printStackTrace();
@@ -372,12 +368,15 @@ public class AdminDatabase {
 					Bot.PROGRAM = Site.NAME;
 					Bot.VERSION = Site.VERSION;
 					Bot.POOL_SIZE = Site.MAX_BOT_POOL_SIZE;
-					DatabaseMemory.SCHEMA_URL_PREFIX = "jdbc:postgresql:" + Site.PERSISTENCE_UNIT + "_bots" + "?currentSchema=";
-					DatabaseMemory.DATABASE_URL = "jdbc:postgresql:" + Site.PERSISTENCE_UNIT + "_bots";
+					DatabaseMemory.SCHEMA_URL_PREFIX = Site.DATABASE_URL + "/" + Site.PERSISTENCE_UNIT + "?currentSchema=";
+					DatabaseMemory.DATABASE_URL = Site.DATABASE_URL + "/" + Site.PERSISTENCE_UNIT;
 					DatabaseMemory.DATABASE_PASSWORD = Site.DATABASEPASSWORD;
-					
+
 					Map<String, String> properties = new HashMap<String, String>();
+					properties.put(PersistenceUnitProperties.JDBC_DRIVER, DATABASE_DRIVER);
+					properties.put(PersistenceUnitProperties.JDBC_USER, Site.DATABASE_USER);
 					properties.put(PersistenceUnitProperties.JDBC_PASSWORD, Site.DATABASEPASSWORD);
+					properties.put(PersistenceUnitProperties.JDBC_URL, Site.DATABASE_URL);
 					/**properties.put(PersistenceUnitProperties.JDBC_DRIVER, DATABASE_DRIVER);
 					properties.put(PersistenceUnitProperties.JDBC_URL, DATABASE_URL);
 					properties.put(PersistenceUnitProperties.JDBC_USER, DATABASE_USER);
