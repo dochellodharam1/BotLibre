@@ -1,3 +1,7 @@
+
+
+echo "CACHE_DIR ::: $CACHE_DIR"
+
 MVN_ALIAS=`alias mvn`
 MVN_CMD=`echo "$MVN_ALIAS" | cut -d"'" -f2`
 
