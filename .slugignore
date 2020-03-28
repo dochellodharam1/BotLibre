@@ -1,0 +1,8 @@
+avatars
+avatars/*.*
+docs
+docs/*.*
+scripts/*.*
+lib
+lib/*
+lib/*/*.*
