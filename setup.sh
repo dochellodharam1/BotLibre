@@ -1,5 +1,6 @@
-echo `alias mvn` | cat - lib/deploy_maven_libs.sh > /tmp/out && mv /tmp/out lib/deploy_maven_libs.sh
+MVN_ALIAS=`alias mvn`
+MVN_CMD=`echo "$MVN_ALIAS" | cut -d"'" -f2`
 
-cat lib/deploy_maven_libs.sh
+sed -i "s@mvn@$MVN_CMD@g" lib/deploy_maven_libs.sh
 
 . lib/deploy_maven_libs.sh
